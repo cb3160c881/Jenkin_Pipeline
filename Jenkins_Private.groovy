@@ -12,6 +12,7 @@ pipeline{
         stage("Build"){
             steps{
                 println "Build Code"
+                sh "mvn clean package"
             }
         }
         stage("Upload"){
