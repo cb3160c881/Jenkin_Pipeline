@@ -18,6 +18,7 @@ pipeline{
         stage("Upload"){
             steps{
                 println "Upload Artifacts"
+                sh "aws s3 cp target/hello-*.war s3://pipelineupload01"
             }
         }    
          
